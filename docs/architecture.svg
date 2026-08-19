@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820" font-family="Segoe UI, PingFang SC, Microsoft YaHei, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1220"/><stop offset="1" stop-color="#101a2e"/>
+    </linearGradient>
+    <linearGradient id="acc" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#0ea5e9"/>
+    </linearGradient>
+    <linearGradient id="ai" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#a78bfa"/><stop offset="1" stop-color="#818cf8"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#38bdf8"/>
+    </marker>
+    <marker id="arrd" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#f59e0b"/>
+    </marker>
+    <marker id="arrg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#34d399"/>
+    </marker>
+  </defs>
+
+  <rect width="1400" height="820" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="700" y="44" text-anchor="middle" fill="#e6edf7" font-size="26" font-weight="700">IntDevTools · 架构总览（公开演示）</text>
+  <text x="700" y="68" text-anchor="middle" fill="#8fa3c2" font-size="14">Architecture Overview · AI-assisted R&amp;D Delivery Chain</text>
+
+  <!-- ============ Layer 1: Portal ============ -->
+  <rect x="120" y="100" width="1160" height="86" rx="14" fill="#14203a" stroke="#24355c"/>
+  <text x="700" y="130" text-anchor="middle" fill="#e6edf7" font-size="17" font-weight="700">研发工作台 / Portal（配置驱动 · 静态门户）</text>
+  <text x="700" y="152" text-anchor="middle" fill="#8fa3c2" font-size="12.5">统一入口 · 3D 关系图 · 点击启动工具 · 工具状态指示</text>
+  <text x="700" y="172" text-anchor="middle" fill="#64748b" font-size="11.5">Config-driven · Single entry · One-click launch</text>
+
+  <!-- ============ Layer 2: Core tools ============ -->
+  <text x="700" y="240" text-anchor="middle" fill="#8fa3c2" font-size="13">公开演示聚焦 3 个核心工具 · Public demo focuses on 3 core tools</text>
+
+  <!-- tool 1: req tracker -->
+  <rect x="110" y="262" width="360" height="150" rx="12" fill="#14203a" stroke="#22d3ee" stroke-width="1.6"/>
+  <rect x="110" y="262" width="360" height="34" rx="12" fill="#22d3ee" opacity="0.16"/>
+  <text x="130" y="283" fill="#22d3ee" font-size="14" font-weight="700">01 需求管理 · Requirements Mgmt</text>
+  <text x="130" y="312" fill="#c9d6ee" font-size="12.5">需求导入（REQM）→ 规格（SPEC）→ 系统要件（SYRA）</text>
+  <text x="130" y="332" fill="#c9d6ee" font-size="12.5">AI 辅助评估：标准匹配 · 验证条目 · 开发等级判定</text>
+  <text x="130" y="352" fill="#8fa3c2" font-size="11.5">V-model left half · Traceability matrix</text>
+  <text x="130" y="382" fill="#f59e0b" font-size="12" font-weight="600">输出：开发等级 / SYRA·SYAD 设计文档（经数据总线）</text>
+
+  <!-- tool 2: prereview -->
+  <rect x="520" y="262" width="360" height="150" rx="12" fill="#14203a" stroke="#a78bfa" stroke-width="1.6"/>
+  <rect x="520" y="262" width="360" height="34" rx="12" fill="#a78bfa" opacity="0.16"/>
+  <text x="540" y="283" fill="#a78bfa" font-size="14" font-weight="700">02 设计审查 · AI Design Review</text>
+  <text x="540" y="312" fill="#c9d6ee" font-size="12.5">审查规则库 + 示例知识库 + 审查引擎</text>
+  <text x="540" y="332" fill="#c9d6ee" font-size="12.5">AI 预审 → 逐条发现 → 人工确认 → 结果回写追溯矩阵</text>
+  <text x="540" y="352" fill="#8fa3c2" font-size="11.5">Rule-based + LLM-assisted · Human-in-the-loop</text>
+  <text x="540" y="382" fill="#f59e0b" font-size="12" font-weight="600">输出：审查发现 / 审查报告（人工确认后生效）</text>
+
+  <!-- tool 3: eval base gen -->
+  <rect x="930" y="262" width="360" height="150" rx="12" fill="#14203a" stroke="#34d399" stroke-width="1.6"/>
+  <rect x="930" y="262" width="360" height="34" rx="12" fill="#34d399" opacity="0.16"/>
+  <text x="950" y="283" fill="#34d399" font-size="14" font-weight="700">05 评价基准 · Evaluation Base</text>
+  <text x="950" y="312" fill="#c9d6ee" font-size="12.5">按产品大类 + 需求特性生成评价/测试清单</text>
+  <text x="950" y="332" fill="#c9d6ee" font-size="12.5">严重度：必须 / 推荐 / 参考 · 只出清单不落地文件</text>
+  <text x="950" y="352" fill="#8fa3c2" font-size="11.5">General category + product-specific items</text>
+  <text x="950" y="382" fill="#f59e0b" font-size="12" font-weight="600">输出：评价清单 → SYQT 补充 / 文件管理落地</text>
+
+  <!-- ============ Data bus ============ -->
+  <rect x="300" y="452" width="800" height="64" rx="12" fill="#1a2947" stroke="#38bdf8" stroke-width="1.6" stroke-dasharray="7 4"/>
+  <text x="700" y="480" text-anchor="middle" fill="#38bdf8" font-size="14.5" font-weight="700">07 跨工具数据总线 · Cross-tool Data Bus（业务数据中转，禁止工具直连）</text>
+  <text x="700" y="501" text-anchor="middle" fill="#8fa3c2" font-size="12">开发等级 → 计划生成 · 设计文档 → 审查 · 审查结果 → 追溯矩阵 · 评价清单 → SYQT</text>
+
+  <!-- ============ Layer 3: Knowledge Base ============ -->
+  <text x="700" y="566" text-anchor="middle" fill="#8fa3c2" font-size="13">知识库（示例分类，非真实 KHDB）· Knowledge Base</text>
+
+  <rect x="180" y="586" width="300" height="74" rx="12" fill="#14203a" stroke="#f59e0b" stroke-width="1.4"/>
+  <text x="330" y="614" text-anchor="middle" fill="#f59e0b" font-size="13.5" font-weight="700">10 标准 · Standards（示例）</text>
+  <text x="330" y="636" text-anchor="middle" fill="#c9d6ee" font-size="12">标准号 → 需求导入 / 审查依据 / 评价依据</text>
+
+  <rect x="550" y="586" width="300" height="74" rx="12" fill="#14203a" stroke="#f59e0b" stroke-width="1.4"/>
+  <text x="700" y="614" text-anchor="middle" fill="#f59e0b" font-size="13.5" font-weight="700">20 产品 · Products（示例）</text>
+  <text x="700" y="636" text-anchor="middle" fill="#c9d6ee" font-size="12">验证条目 → SYQT · 设计/审查经验沉淀</text>
+
+  <rect x="920" y="586" width="300" height="74" rx="12" fill="#14203a" stroke="#f59e0b" stroke-width="1.4"/>
+  <text x="1070" y="614" text-anchor="middle" fill="#f59e0b" font-size="13.5" font-weight="700">40 流程 · Process（示例）</text>
+  <text x="1070" y="636" text-anchor="middle" fill="#c9d6ee" font-size="12">流程模板 → 开发计划 / 文件清单</text>
+
+  <!-- AI gateway side box -->
+  <rect x="1180" y="500" width="200" height="80" rx="12" fill="#1a2947" stroke="#a78bfa" stroke-width="1.4"/>
+  <text x="1280" y="524" text-anchor="middle" fill="#a78bfa" font-size="13" font-weight="700">统一 LLM 网关</text>
+  <text x="1280" y="544" text-anchor="middle" fill="#8fa3c2" font-size="11.5">可选接入 · 统一封装</text>
+  <text x="1280" y="562" text-anchor="middle" fill="#8fa3c2" font-size="11.5">不在业务代码直连</text>
+
+  <!-- ============ Arrows: business data flow (blue solid) ============ -->
+  <path d="M470,337 C 500,337 500,320 520,320" stroke="#38bdf8" stroke-width="2.2" fill="none" marker-end="url(#arr)"/>
+  <text x="495" y="312" text-anchor="middle" fill="#38bdf8" font-size="11">SYRA/SYAD</text>
+
+  <path d="M880,350 C 910,350 910,382 930,382" stroke="#38bdf8" stroke-width="2.2" fill="none" marker-end="url(#arr)"/>
+  <text x="905" y="370" text-anchor="middle" fill="#38bdf8" font-size="11">审查发现</text>
+
+  <!-- arrows to data bus -->
+  <path d="M290,412 L 430,452" stroke="#38bdf8" stroke-width="2" fill="none" marker-end="url(#arr)" opacity="0.8"/>
+  <path d="M700,412 L 700,452" stroke="#38bdf8" stroke-width="2" fill="none" marker-end="url(#arr)" opacity="0.8"/>
+  <path d="M1110,412 L 970,452" stroke="#38bdf8" stroke-width="2" fill="none" marker-end="url(#arr)" opacity="0.8"/>
+
+  <!-- ============ Arrows: knowledge (gold dashed) ============ -->
+  <path d="M330,586 L 330,516" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6 5" fill="none" marker-end="url(#arrd)"/>
+  <path d="M700,586 L 700,516" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6 5" fill="none" marker-end="url(#arrd)"/>
+  <path d="M1070,586 L 1070,516" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6 5" fill="none" marker-end="url(#arrd)"/>
+
+  <!-- loop back: review -> KB (gold) -->
+  <path d="M880,400 C 980,440 1080,470 1180,520" stroke="#f59e0b" stroke-width="2.2" stroke-dasharray="7 5" fill="none" marker-end="url(#arrd)"/>
+  <text x="1020" y="452" fill="#f59e0b" font-size="11.5">审查经验沉淀（人工确认）</text>
+
+  <!-- legend -->
+  <g font-size="12">
+    <line x1="240" y1="700" x2="285" y2="700" stroke="#38bdf8" stroke-width="2.4"/>
+    <text x="295" y="704" fill="#c9d6ee">业务数据流（经 07 数据总线）</text>
+    <line x1="560" y1="700" x2="605" y2="700" stroke="#f59e0b" stroke-width="2.4" stroke-dasharray="6 5"/>
+    <text x="615" y="704" fill="#c9d6ee">知识提供 / 沉淀（知识流）</text>
+    <line x1="880" y1="700" x2="925" y2="700" stroke="#a78bfa" stroke-width="2.4"/>
+    <text x="935" y="704" fill="#c9d6ee">AI 辅助环节（人工确认后生效）</text>
+  </g>
+
+  <!-- honesty note -->
+  <rect x="240" y="730" width="920" height="58" rx="10" fill="#101a2e" stroke="#24355c"/>
+  <text x="700" y="752" text-anchor="middle" fill="#8fa3c2" font-size="12.5">诚实口径：AI 仅作为辅助/编排角色 —— AI 生成结果（评估、审查发现、评价清单）均由工程师人工确认后写入与流转。</text>
+  <text x="700" y="774" text-anchor="middle" fill="#64748b" font-size="11.5">Honest positioning: AI assists and orchestrates; humans confirm every AI output before it takes effect.</text>
+</svg>

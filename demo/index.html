@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>IntDevTools 公开演示 · AI 辅助研发交付链</title>
+<meta name="description" content="IntDevTools 公开演示：需求导入 → AI 设计审查 → AI 生成评价基准 → 知识沉淀。所有数据均为虚构示例。" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="app">
+
+  <!-- ================= 左侧：步骤导航 ================= -->
+  <aside class="side-l">
+    <div class="brand">
+      <div class="brand-logo">IDT</div>
+      <div>
+        <div class="brand-name">IntDevTools<span class="badge-demo">DEMO</span></div>
+        <div class="brand-sub">Integrated Development Tools · Public Demo</div>
+      </div>
+    </div>
+    <nav class="stepper" id="stepper"></nav>
+  </aside>
+
+  <!-- ================= 中间：主内容 ================= -->
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <h1 id="page-title">研发交付演示工作台</h1>
+        <div class="sub" id="page-sub">AI 辅助研发交付链 · AI-assisted R&D delivery chain</div>
+      </div>
+      <div class="chip"><span class="dot"></span><span>项目：</span><b id="chip-project">—</b></div>
+    </header>
+    <div id="view"></div>
+    <div class="disclaimer" id="disclaimer"></div>
+  </main>
+
+  <!-- ================= 右侧：知识库 ================= -->
+  <aside class="side-r">
+    <div class="side-r-inner">
+      <h4>知识库 · Knowledge Base <span style="text-transform:none">（示例）</span></h4>
+      <div id="kb-list"></div>
+      <div class="kb-panel-title">数据流 · Data Flow</div>
+      <div id="flow-list"></div>
+      <div class="kb-panel-title">演示说明 · About</div>
+      <div class="kb-card" style="font-size:12px;color:var(--muted)">
+        本演示为静态交互样例，模拟 IntDevTools 中三个核心工具（需求管理 / 设计审查 / 评价基准）的交付链路。<br/><br/>
+        AI 结果为<b style="color:var(--text)">规则 + 示例知识库</b>驱动的确定性模拟；真实系统中通过统一 LLM 网关调用，且<b style="color:var(--warn)">人工确认后生效</b>。
+      </div>
+    </div>
+  </aside>
+
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
