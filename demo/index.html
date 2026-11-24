@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>IntDevTools 公开演示 · AI 辅助研发交付链</title>
-<meta name="description" content="IntDevTools 公开演示：需求导入 → AI 设计审查 → AI 生成评价基准 → 知识沉淀。所有数据均为虚构示例。" />
+<title>IntDevTools 公开演示 v2 · 真实后端可运行版</title>
+<meta name="description" content="IntDevTools 公开演示 v2：需求导入 → AI 设计审查 → AI 生成评价基准 → 知识沉淀，全部输出来自真实后端代码。所有数据为虚构示例。" />
 <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -15,8 +15,8 @@
     <div class="brand">
       <div class="brand-logo">IDT</div>
       <div>
-        <div class="brand-name">IntDevTools<span class="badge-demo">DEMO</span></div>
-        <div class="brand-sub">Integrated Development Tools · Public Demo</div>
+        <div class="brand-name">IntDevTools<span class="badge-demo">v2 REAL</span></div>
+        <div class="brand-sub">Integrated Development Tools · Real API Demo</div>
       </div>
     </div>
     <nav class="stepper" id="stepper"></nav>
@@ -26,10 +26,13 @@
   <main class="main">
     <header class="topbar">
       <div>
-        <h1 id="page-title">研发交付演示工作台</h1>
-        <div class="sub" id="page-sub">AI 辅助研发交付链 · AI-assisted R&D delivery chain</div>
+        <h1 id="page-title">研发交付演示工作台（真实后端）</h1>
+        <div class="sub" id="page-sub">AI 辅助研发交付链 · 4 步链路全部调用真实 API</div>
       </div>
-      <div class="chip"><span class="dot"></span><span>项目：</span><b id="chip-project">—</b></div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <div class="chip"><span class="dot"></span><span>项目：</span><b id="chip-project">—</b></div>
+        <div class="chip" id="chip-mode" style="border-color:rgba(167,139,250,0.4)">模式：<b style="color:var(--ai)">检测中…</b></div>
+      </div>
     </header>
     <div id="view"></div>
     <div class="disclaimer" id="disclaimer"></div>
@@ -38,21 +41,22 @@
   <!-- ================= 右侧：知识库 ================= -->
   <aside class="side-r">
     <div class="side-r-inner">
-      <h4>知识库 · Knowledge Base <span style="text-transform:none">（示例）</span></h4>
+      <h4>示例知识库 · Knowledge Base</h4>
       <div id="kb-list"></div>
       <div class="kb-panel-title">数据流 · Data Flow</div>
       <div id="flow-list"></div>
-      <div class="kb-panel-title">演示说明 · About</div>
+      <div class="kb-panel-title">关于 v2 · About</div>
       <div class="kb-card" style="font-size:12px;color:var(--muted)">
-        本演示为静态交互样例，模拟 IntDevTools 中三个核心工具（需求管理 / 设计审查 / 评价基准）的交付链路。<br/><br/>
-        AI 结果为<b style="color:var(--text)">规则 + 示例知识库</b>驱动的确定性模拟；真实系统中通过统一 LLM 网关调用，且<b style="color:var(--warn)">人工确认后生效</b>。
+        v2 为<b style="color:var(--text)">真实可运行版</b>：后端包含开发等级判定 / 设计审查引擎 / 评价基准生成 / 数据总线 4 个真实组件，输出可解释、带依据。<br/><br/>
+        运行方式：<code style="color:var(--accent)">cd backend && start.bat</code>（或 <code>bash start.sh</code>），打开 <code>http://127.0.0.1:8000/</code>。<br/><br/>
+        可选 LLM 模式：设置环境变量 <code>LLM_API_KEY</code> 后，复杂审查规则走真实 LLM（BYOK，不提交 key）。
       </div>
     </div>
   </aside>
 
 </div>
 
-<script src="js/data.js"></script>
+<script src="js/api.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>

@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "development_level.schema.json",
+  "title": "开发等级",
+  "description": "由需求管理按需求难度判定，经数据总线中转。",
+  "type": "object",
+  "properties": {
+    "project_id": { "type": "integer" },
+    "level": { "type": "string", "enum": ["L1", "L2", "L3", "L4", "L5"] },
+    "difficulty": { "type": "string", "enum": ["low", "medium", "high", "critical"] },
+    "reason": { "type": "string" },
+    "updated_at": { "type": ["string", "null"] }
+  },
+  "required": ["project_id", "level", "difficulty"],
+  "additionalProperties": false
+}

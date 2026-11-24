@@ -1,0 +1,11 @@
+[
+  {"id": "01", "name": "额定性能", "name_en": "Rated Performance", "description": "产品在正常工作状态下的各项性能指标", "typical_items": ["消耗电流 / 功率", "工作电压范围", "检测距离 / 精度", "响应时间", "输出特性"]},
+  {"id": "02", "name": "电气环境", "name_en": "Electrical Environmental", "description": "电磁兼容性、静电放电、电快速瞬变脉冲群等电气环境试验", "typical_items": ["ESD 静电放电", "辐射电磁场抗扰", "电快速瞬变脉冲群", "浪涌抗扰", "电压暂降 / 中断"]},
+  {"id": "03", "name": "环境适应性", "name_en": "Environmental", "description": "温度、湿度、盐雾等环境适应性试验", "typical_items": ["高温试验", "低温试验", "温湿度循环", "耐湿性", "盐雾试验"]},
+  {"id": "04", "name": "机械环境", "name_en": "Mechanical Environmental", "description": "振动、冲击、跌落等机械环境试验", "typical_items": ["正弦振动", "随机振动", "机械冲击", "自由跌落", "碰撞试验"]},
+  {"id": "05", "name": "安全性", "name_en": "Safety", "description": "电气安全、机械安全、功能安全", "typical_items": ["接地连续性", "漏电流", "介电强度", "爬电距离 / 电气间隙", "温度限值"]},
+  {"id": "06", "name": "施工维护", "name_en": "Construction & Maintenance", "description": "安装、布线、维护便利性", "typical_items": ["安装空间要求", "接线端子可达性", "标识清晰度", "维护周期", "可更换部件"]},
+  {"id": "07", "name": "可用性", "name_en": "Usability", "description": "操作便利性、人机界面、显示读取性", "typical_items": ["操作力 / 手感", "显示清晰度", "设置便利性", "反馈确认", "误操作防止"]},
+  {"id": "08", "name": "包装运输", "name_en": "Packaging & Transport", "description": "包装方式、运输环境适应性", "typical_items": ["包装跌落", "振动运输", "堆码强度"]},
+  {"id": "09", "name": "外观结构", "name_en": "Appearance & Structure", "description": "外观品质、结构完整性", "typical_items": ["外观检查", "尺寸检查", "涂装 / 表面处理"]}
+]

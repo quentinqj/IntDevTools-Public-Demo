@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "review_result.schema.json",
+  "title": "审查结果",
+  "description": "由设计审查对设计文档审查后输出，经数据总线中转给需求管理追溯矩阵，并沉淀到示例知识库。",
+  "type": "object",
+  "properties": {
+    "project_id": { "type": "integer" },
+    "review_id": { "type": "integer" },
+    "design_document_id": { "type": "string" },
+    "file_list": { "type": "array", "items": { "type": "string" } },
+    "status": { "type": "string", "enum": ["passed", "failed", "pending"] },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "severity": { "type": "string", "enum": ["high", "medium", "low"] },
+          "category": { "type": "string" },
+          "description": { "type": "string" },
+          "suggestion": { "type": "string" }
+        },
+        "required": ["severity", "description"],
+        "additionalProperties": false
+      }
+    },
+    "reviewed_at": { "type": "string" },
+    "confirmed_by_user": { "type": "boolean", "default": false }
+  },
+  "required": ["project_id", "status", "findings"],
+  "additionalProperties": false
+}

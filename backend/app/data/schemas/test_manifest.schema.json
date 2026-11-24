@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "test_manifest.schema.json",
+  "title": "测试文件清单",
+  "description": "由评价基准生成按产品大类生成（通用大类评价 + 产品特有评价），经数据总线中转。只出清单。",
+  "type": "object",
+  "properties": {
+    "project_id": { "type": "integer" },
+    "product_type_id": { "type": "string" },
+    "kind": { "type": "string", "enum": ["common", "special"] },
+    "generated_at": { "type": "string" },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "category": { "type": "string" },
+          "validation_item": { "type": "string" },
+          "doc_name": { "type": "string" },
+          "template_path": { "type": "string" }
+        },
+        "required": ["category", "validation_item", "doc_name"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["project_id", "product_type_id", "kind", "items"],
+  "additionalProperties": false
+}

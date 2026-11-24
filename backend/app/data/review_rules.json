@@ -1,0 +1,79 @@
+[
+  {
+    "id": "R-202",
+    "rule_name": "电磁兼容设计检查（EMC）",
+    "check_method": "other",
+    "keywords": ["载波", "调制", "环境光", "频闪", "抗扰"],
+    "must_include": ["频段错开", "频谱分析"],
+    "target_file_pattern": "*.md",
+    "check_logic": "载波/开关频率应与常见光源频闪（100~120 Hz）谐波频段错开，并补充频谱分析",
+    "ng_condition": "载波调制频率与光源频闪谐波存在重叠风险：文档未包含频段错开或频谱分析说明",
+    "severity_ng": "high",
+    "suggestion": "补充频段错开分析，并在测试清单增加强光频闪场景测试",
+    "feasibility": "fully_reviewable"
+  },
+  {
+    "id": "R-118",
+    "rule_name": "参数容差检查",
+    "check_method": "other",
+    "keywords": ["灵敏度", "增益", "调节"],
+    "must_include": ["下限", "容差", "裕量"],
+    "target_file_pattern": "*.md",
+    "check_logic": "关键性能参数应定义范围与容差",
+    "ng_condition": "灵敏度调节范围未定义下限：文档未给出增益裕量下限，量产批次间检测距离可能缩水",
+    "severity_ng": "medium",
+    "suggestion": "定义灵敏度调节范围下限（示例：≥ 标称增益 80%），并加入出厂校准项",
+    "feasibility": "fully_reviewable"
+  },
+  {
+    "id": "R-007",
+    "rule_name": "术语一致性",
+    "check_method": "term_consistency",
+    "terms": ["检测距离", "感测距离"],
+    "target_file_pattern": "*.md",
+    "check_logic": "同一概念在全文档中应使用统一术语",
+    "ng_condition": "术语不一致：同一参数出现多种写法",
+    "severity_ng": "low",
+    "suggestion": "统一术语并同步需求/测试文档引用",
+    "feasibility": "fully_reviewable"
+  },
+  {
+    "id": "R-301",
+    "rule_name": "输出短路保护检查",
+    "check_method": "keyword_present",
+    "keywords": ["短路保护"],
+    "target_file_pattern": "*.md",
+    "check_logic": "输出接口应包含短路保护设计",
+    "ok_message": "检测到输出短路保护描述",
+    "ng_condition": "输出接口缺少短路保护设计",
+    "severity_ng": "high",
+    "suggestion": "补充输出短路保护设计（如限流/自恢复）",
+    "feasibility": "fully_reviewable"
+  },
+  {
+    "id": "R-402",
+    "rule_name": "可靠性试验检查",
+    "check_method": "other",
+    "keywords": ["MTBF", "寿命试验", "老化", "可靠性"],
+    "must_include": ["老化", "寿命"],
+    "target_file_pattern": "*.md",
+    "check_logic": "可靠性关键参数应包含老化/寿命试验说明",
+    "ng_condition": "文档未说明可靠性/老化试验要求",
+    "severity_ng": "medium",
+    "suggestion": "补充可靠性试验要求（老化、寿命）",
+    "feasibility": "fully_reviewable"
+  },
+  {
+    "id": "R-501",
+    "rule_name": "外观标注检查",
+    "check_method": "other",
+    "keywords": ["外观", "标注"],
+    "target_file_pattern": "*.md",
+    "check_logic": "外观标注检查依赖产品图片/截图核对",
+    "ng_condition": "外观标注需人工对照图片确认",
+    "severity_ng": "medium",
+    "suggestion": "人工打开产品图片核对外观标注",
+    "feasibility": "needs_manual_review",
+    "feasibility_reason": "D1:审查内容依赖图片/截图"
+  }
+]
